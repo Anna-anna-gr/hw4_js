@@ -42,7 +42,7 @@ it('searchTerm: ${searchTerm.testData.email}', () => {
   cy.get('[title="Form Layouts"]').click();
 
 
-  cy.get('#inputEmail1').type(searchTerm.testData.email),
+  cy.get('#inputEmail1',{timeout:10000}).type(searchTerm.testData.email),
   cy.get('#inputEmail1').should('have.value',searchTerm.expectedResult.email),
 
   cy.get('#inputPassword2').type(searchTerm.testData.password),
